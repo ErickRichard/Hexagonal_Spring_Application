@@ -11,4 +11,9 @@ class PostServiceImp(private val postRepository: PostRepository) : PostService {
         val result = postRepository.getPostFromJsonObject(id)
         return EntryPointConverter.toPostResponse(result)
     }
+
+    override fun getAllPost(): List<PostResponse> {
+        val result = postRepository.getAllPostFromList();
+        return EntryPointConverter.toPostListResponse(result)
+    }
 }

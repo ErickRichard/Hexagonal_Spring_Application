@@ -9,4 +9,5 @@ import org.springframework.stereotype.Component
 class PostBeanConfiguration {
     @Bean
     fun postService(postRepository: PostRepository): PostServiceImp = PostServiceImp(postRepository)
+
 }

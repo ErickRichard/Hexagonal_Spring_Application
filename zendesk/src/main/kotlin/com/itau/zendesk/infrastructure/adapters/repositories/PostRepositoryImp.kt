@@ -18,4 +18,12 @@ class PostRepositoryImp(private val postClient: PostClient) : PostRepository {
             throw ex
         }
     }
+
+    override fun getAllPostFromList(): List<PostFromJsonplaceholder> {
+        return try {
+            postClient.getAllPostByFeign().let { it.body!! }
+        } catch (ex: FeignException) {
+            throw ex
+        }
+    }
 }

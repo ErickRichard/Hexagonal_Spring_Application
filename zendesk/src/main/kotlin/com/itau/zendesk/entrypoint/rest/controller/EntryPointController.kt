@@ -17,4 +17,9 @@ class EntryPointController(
     fun searchPostById(@PathVariable(value = "id_post") id_post: String): ResponseEntity<PostResponse> {
         return ResponseEntity.ok(postService.getPostById(id_post))
     }
+
+    @GetMapping("/")
+    fun searchAllPost(): ResponseEntity<List<PostResponse>> {
+        return ResponseEntity.ok(postService.getAllPost())
+    }
 }

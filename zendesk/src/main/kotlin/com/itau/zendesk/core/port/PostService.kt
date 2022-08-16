@@ -4,4 +4,6 @@ import com.itau.zendesk.entrypoint.rest.model.PostResponse
 
 interface PostService {
     fun getPostById(id: String): PostResponse
+
+    fun getAllPost(): List<PostResponse>
 }

@@ -4,4 +4,6 @@ import com.itau.zendesk.infrastructure.model.PostFromJsonplaceholder
 
 interface PostRepository {
     fun getPostFromJsonObject(id: String): PostFromJsonplaceholder
+
+    fun getAllPostFromList(): List<PostFromJsonplaceholder>
 }
